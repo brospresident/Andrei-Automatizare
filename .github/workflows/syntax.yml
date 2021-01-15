@@ -26,7 +26,7 @@ jobs:
             then 
                 exit 1 
             fi
-            if [ "$(python add.py 1 2)" -e "3" ]
+            if [ "$(python add.py 1 2)" = "3" ]
             then 
                 exit 0 
             fi
