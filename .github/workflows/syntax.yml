@@ -13,5 +13,5 @@ jobs:
           python-version: 3.7
     - run: echo It works
     - run: echo Made by Andrei Radu
-    - run: if [ $("python add 1 2") != "3" ] exit 1 fi
+    - run: if [ $("python add 1 2") != "3" ] echo 1 fi
         
