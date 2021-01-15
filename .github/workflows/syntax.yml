@@ -13,4 +13,12 @@ jobs:
           python-version: 3.7
     - run: echo It works
     - run: echo Made by Andrei Radu
-    - run: python3 add.py 1 2
+    - run: | if [ $("python add 1 2") != "3" ] 
+          exit 1 
+        fi
+
+
+    - run: python3 add.py 2 5 # test 2
+    - run: python3 add.py 3 4 # test 3
+    - run: python3 add.py 1 9 # test 4
+    - run: python3 add.py 2 10 # test 5
