@@ -16,4 +16,4 @@ jobs:
     - run: echo Made by Andrei Radu
     - uses: actions/checkout@v2
     - name: add
-      run: ./add
+      run: ./add.c
