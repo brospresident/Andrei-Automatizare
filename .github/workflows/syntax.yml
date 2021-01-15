@@ -1,9 +1,25 @@
 name: syntax
-on: push
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 jobs:
-    task1:
-        runs-on: ubuntu-latest
-        steps:
-            - run: echo Checker-c works
-            - run: echo Made by Andrei Radu
-            - run: gcc ./add.c
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - run: echo It works
+    - run: Made by Andrei Radu
+    - uses: actions/checkout@v2
+    - name: configure
+      run: ./configure
+    - name: make
+      run: make
+    - name: make check
+      run: make check
+    - name: make distcheck
+      run: make distcheck
