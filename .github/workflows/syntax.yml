@@ -18,5 +18,24 @@ jobs:
             then 
                 exit 1 
             fi
-            
+    - run: |
+            if [ "$(python add.py 2 5)" != "7" ]
+            then 
+                exit 1 
+            fi
+    - run: |
+            if [ "$(python add.py 6 2)" != "8" ]
+            then 
+                exit 1 
+            fi
+    - run: |
+            if [ "$(python add.py 1 2)" = "4" ]
+            then 
+                exit 0 
+            fi
+    - run: |
+            if [ "$(python add.py 23 2)" = "11" ]
+            then 
+                exit 0 
+            fi
         
