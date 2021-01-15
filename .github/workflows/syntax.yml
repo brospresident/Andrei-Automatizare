@@ -11,9 +11,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    sudo chown -R $USER:$USER /home/github/actions-runner/_work/{REPOSITORY_NAME_HERE}
     steps:
     - run: echo It works
     - run: echo Made by Andrei Radu
     - uses: actions/checkout@v2
     - name: add
-      run: sudo ./add.c
+      run: ./add.c
