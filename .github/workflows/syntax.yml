@@ -13,4 +13,4 @@ jobs:
           python-version: 3.7
     - run: echo It works
     - run: echo Made by Andrei Radu
-    - run: python3 add.py $1 $2
+    - run: python3 add.py
