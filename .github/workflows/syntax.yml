@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - run: echo It works
-    - run: Made by Andrei Radu
+    - run: echo Made by Andrei Radu
     - uses: actions/checkout@v2
     - name: configure
       run: ./configure
