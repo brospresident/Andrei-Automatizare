@@ -1,20 +1,16 @@
 name: syntax
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: push
 
 jobs:
-  build:
+  task1:
 
     runs-on: ubuntu-latest
-
-    sudo chown -R $USER:$USER /home/github/actions-runner/_work/{REPOSITORY_NAME_HERE}
     steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+        with:
+            python-version: 3.7
     - run: echo It works
     - run: echo Made by Andrei Radu
-    - uses: actions/checkout@v2
-    - name: add
-      run: ./add.c
+    - run: python3 add.py
