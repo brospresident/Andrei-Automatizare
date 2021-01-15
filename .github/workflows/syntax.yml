@@ -13,12 +13,8 @@ jobs:
           python-version: 3.7
     - run: echo It works
     - run: echo Made by Andrei Radu
-    - run: | if [ $("python add 1 2") != "3" ] 
-          exit 1 
-        fi
-
-
-    - run: python3 add.py 2 5 # test 2
-    - run: python3 add.py 3 4 # test 3
-    - run: python3 add.py 1 9 # test 4
-    - run: python3 add.py 2 10 # test 5
+    - run: | if [ $("python add 1 2") != "3" ] exit 1 fi
+        if [ $("python add 2 2") != "4" ] exit 1 fi 
+        if [ $("python add 3 2") != "5" ] exit 1 fi
+        if [ $("python add 6 2") != "8" ] exit 1 fi
+        if [ $("python add 8 3") != "11" ] exit 1 fi 
