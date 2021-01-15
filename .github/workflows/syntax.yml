@@ -14,5 +14,5 @@ jobs:
     - run: echo It works
     - run: echo Made by Andrei Radu
     - run: | 
-      if [ $("python add.py 1 2") != "3" ]; exit 1 fi
+            if [ $("python add.py 1 2") != "3" ]; exit 1 fi
         
