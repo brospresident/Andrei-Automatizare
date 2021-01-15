@@ -6,4 +6,4 @@ jobs:
         steps:
             - run: echo Checker-c works
             - run: echo Made by Andrei Radu
-            - run: ./add.c
+            - run: gcc add.c
